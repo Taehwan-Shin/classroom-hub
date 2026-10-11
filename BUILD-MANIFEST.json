@@ -1,6 +1,6 @@
 {
   "kind": "classroom-hub-static-v1",
-  "release": "5e428459c35f9c60a57efad1ce7c2b1be39303daadee09bdaade82860e0e9ebc",
+  "release": "47d569e79f2d7236f8ba58552f43449deaaa41e417b888f037ff9f37f1c287b5",
   "files": {
     "app.mjs": "9d9e2985991e8aa9d22f61434252a0c1261cc2ea9d7bbec32f447ac4c342652b",
     "assets/mark.svg": "d180bda54e4215c84b05c75ea0adffedb13f7640aaf507506b20e2bb18e68d95",
@@ -20,7 +20,7 @@
     "styles.css": "95ab97944e11a48b0dce72799378442d1d4c01fac5f8977fd676a57b5d21e1cc",
     "timer-engine.mjs": "c75db85327a1d99c66f1d8219702a5d2d8b32dd9bb6567b77f1502ec1021e66d",
     "timer-view.mjs": "353b3345b057bd899ac21733dad1a8204b0ed92a9c38c210cb25a7895e7d600a",
-    "tools.mjs": "f6483f017621abe89ba571c14dd6525ce291487e5d9fdcd05df2ac7d177f1ba4",
+    "tools.mjs": "98f654672023fbd9df0c74ff2c367a96628a086f67c2f2f40ba8223ed80c9246",
     "vendor/ocr-source.json": "11ef489149ad92093fa0206cf8950edb16f68840e723bf14345af940e4abeb70",
     "vendor/pdfjs/binary-data.mjs": "71f7d0ec321a178e7a84057c7850b95f2f677443bbc464441c036e85043a8da3",
     "vendor/pdfjs/cmaps-LICENSE.txt": "aa92ab5a472974865a96fd4a4e9c13bb41bf6fe1b309cb6b8da48bc9e19839a2",

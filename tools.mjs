@@ -17,7 +17,7 @@ export const tools = Object.freeze([
     "id": "polynomial-forest",
     "title": "다항식 숲 탐험",
     "description": "다람쥐와 거북이의 점프 모험! 공통수학1 문제를 풀고 뱃지를 모으세요.",
-    "route": "#/polynomial",
+    "route": "https://classroom-polynomial-forest.vercel.app/",
     "category": "수학 학습 게임"
   },
   {
@@ -30,7 +30,7 @@ export const tools = Object.freeze([
 ].map(Object.freeze));
 
 export function validateTools(list, routes) {
-  const external = { 'personal-diary': 'https://classroom-diary-098bae6e.web.app/#/diary' };
+  const external = { 'personal-diary': 'https://classroom-diary-098bae6e.web.app/#/diary', 'polynomial-forest': 'https://classroom-polynomial-forest.vercel.app/' };
   const ids = new Set(), paths = new Set();
   return list.filter(tool => {
     if (!tool || typeof tool.id !== 'string' || !/^[a-z][a-z0-9-]*$/.test(tool.id) ||
