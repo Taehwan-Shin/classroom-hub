@@ -1,0 +1,13 @@
+/data/
+/qa/
+/tmp/
+/build/
+/node_modules/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.log

@@ -1,0 +1,14 @@
+{
+  "name": "classroom-hub",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.21.0"
+  },
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "build": "node scripts/build-static.mjs",
+    "preview": "node scripts/preview-static.mjs",
+    "test": "node --test tests/*.test.mjs"
+  }
+}
