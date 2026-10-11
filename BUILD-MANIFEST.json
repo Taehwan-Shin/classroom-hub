@@ -1,12 +1,12 @@
 {
   "kind": "classroom-hub-static-v1",
-  "release": "b6066c9cd8d4099b0b4fde3cdc1769b0186928a79568a461ecb7ca5a76ae2b99",
+  "release": "5e428459c35f9c60a57efad1ce7c2b1be39303daadee09bdaade82860e0e9ebc",
   "files": {
     "app.mjs": "9d9e2985991e8aa9d22f61434252a0c1261cc2ea9d7bbec32f447ac4c342652b",
     "assets/mark.svg": "d180bda54e4215c84b05c75ea0adffedb13f7640aaf507506b20e2bb18e68d95",
     "audio.mjs": "f47c6a592fa6828252af1eff2d0d9a295522bf4078b95d9d23d97886b68a0d69",
     "excel-export.mjs": "4229b7f0c5b96582e06476af78ac30c0c6036f61f915df2ae53a0a48b436ea9f",
-    "hub-view.mjs": "575eb18c77a7c80043c21c49be182f9910a1526c04286eb1ac74708f81d2f9df",
+    "hub-view.mjs": "5c9525c57782eb346bb978677f7a9bb91ea432e86e2d09b3f1a8600d6356f8ac",
     "index.html": "5f81283ed2a3d1b9eb99f0722558dff75fd4fefa6de9ec4ad5ed9a1eaa29a555",
     "local-ocr.mjs": "50115a2cd09ee8a54ce7d5de05205721f50e7b778cc497addfe2467fb4d6d353",
     "ocr-worker.js": "655a0c8d7dfc6911b25bb127df05183d17c59cd8a7d94a4bd2bfaf42cb6f44dc",
@@ -20,7 +20,7 @@
     "styles.css": "95ab97944e11a48b0dce72799378442d1d4c01fac5f8977fd676a57b5d21e1cc",
     "timer-engine.mjs": "c75db85327a1d99c66f1d8219702a5d2d8b32dd9bb6567b77f1502ec1021e66d",
     "timer-view.mjs": "353b3345b057bd899ac21733dad1a8204b0ed92a9c38c210cb25a7895e7d600a",
-    "tools.mjs": "75f5b1b587dbfb4dccf69ebffd5496a312dcce5c79b13d61b266d95a44a813b1",
+    "tools.mjs": "f6483f017621abe89ba571c14dd6525ce291487e5d9fdcd05df2ac7d177f1ba4",
     "vendor/ocr-source.json": "11ef489149ad92093fa0206cf8950edb16f68840e723bf14345af940e4abeb70",
     "vendor/pdfjs/binary-data.mjs": "71f7d0ec321a178e7a84057c7850b95f2f677443bbc464441c036e85043a8da3",
     "vendor/pdfjs/cmaps-LICENSE.txt": "aa92ab5a472974865a96fd4a4e9c13bb41bf6fe1b309cb6b8da48bc9e19839a2",

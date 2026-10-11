@@ -19,15 +19,23 @@ export const tools = Object.freeze([
     "description": "다람쥐와 거북이의 점프 모험! 공통수학1 문제를 풀고 뱃지를 모으세요.",
     "route": "#/polynomial",
     "category": "수학 학습 게임"
+  },
+  {
+    "id": "personal-diary",
+    "title": "오늘의 일기",
+    "description": "Google 계정으로 로그인하고 암호화한 일기를 보관하세요.",
+    "route": "https://classroom-diary-098bae6e.web.app/#/diary",
+    "category": "개인 기록"
   }
 ].map(Object.freeze));
 
 export function validateTools(list, routes) {
+  const external = { 'personal-diary': 'https://classroom-diary-098bae6e.web.app/#/diary' };
   const ids = new Set(), paths = new Set();
   return list.filter(tool => {
     if (!tool || typeof tool.id !== 'string' || !/^[a-z][a-z0-9-]*$/.test(tool.id) ||
         typeof tool.title !== 'string' || !tool.title || typeof tool.description !== 'string' ||
-        !routes.has(tool.route) || ids.has(tool.id) || paths.has(tool.route)) return false;
+        !(routes.has(tool.route) || external[tool.id] === tool.route) || ids.has(tool.id) || paths.has(tool.route)) return false;
     ids.add(tool.id); paths.add(tool.route);
     return true;
   });
