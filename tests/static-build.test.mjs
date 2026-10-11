@@ -18,7 +18,7 @@ test('public build excludes diary, preserves releases, and refuses altered input
     assert.ok(Object.keys(files).every(name => !name.includes('diary') && !name.startsWith('data/')));
     const app = await readFile(path.join(output, 'app.mjs'), 'utf8');
     assert.ok(!app.includes('#/diary'));
-    assert.ok(!(await readFile(path.join(output, 'tools.mjs'), 'utf8')).includes('#/diary'));
+    assert.ok((await readFile(path.join(output, 'tools.mjs'), 'utf8')).includes('https://classroom-diary-098bae6e.web.app/#/diary'));
     assert.ok((await readFile(path.join(output, 'index.html'), 'utf8')).includes("connect-src 'none'"));
     const manifest = JSON.parse(await readFile(path.join(output, 'BUILD-MANIFEST.json'), 'utf8'));
     assert.deepEqual(await fileHashes(path.join(dir, 'build/releases', manifest.release)), files);

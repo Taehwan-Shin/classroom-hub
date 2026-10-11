@@ -77,5 +77,11 @@ test('registered tool filtering rejects external paths, missing handlers and dup
   const extra = { id: 'example', title: '예시 도구', description: '합성 예시', route: '#/example' };
   const list = [...tools, extra, extra, { ...extra, id: 'bad', route: 'javascript:alert(1)' },
     { ...extra, id: 'unknown', route: '#/unknown' }, { ...extra, id: 'space id' }, { ...extra, title: '' }];
-  assert.deepEqual(validateTools(list, routes).map(tool => tool.id), ['classroom-timer', 'pdf-inspector', 'example']);
+  assert.deepEqual(validateTools(list, routes).map(tool => tool.id), ['classroom-timer', 'pdf-inspector', 'personal-diary', 'example']);
+});
+
+test('external links accept only an exact developer-approved destination and ID', () => {
+  const diary = tools.find(t => t.id === 'personal-diary');
+  for (const tool of [{...diary, route: 'https://evil.example/'}, {...diary, route: diary.route + '&next=https://evil.example'}, {...diary, id: 'other'}, {...diary, route: 'javascript:alert(1)'}]) assert.equal(validateTools([tool], new Set()).length, 0);
+  assert.equal(validateTools([diary], new Set()).length, 1);
 });

@@ -18,6 +18,7 @@ export function renderHub(main, tools) {
     const card = document.createElement('a');
     card.className = 'tool-card';
     card.href = tool.route;
+    card.referrerPolicy = 'no-referrer';
     card.innerHTML = `<div class="card-copy"><span class="tag"></span><h3></h3><p></p><span class="card-action">도구 열기 <span aria-hidden="true">↗</span></span></div>
       <div class="timer-illustration" aria-hidden="true"><span class="illustration-caption">시간을 함께 보세요</span><div class="notebook"><span class="notebook-label">classroom timer</span><span class="sample-time">05:00</span><span class="notebook-line"></span><span class="sample-caption">우리의 집중 시간</span></div><span class="sparkle">✦</span></div>`;
     card.querySelector('.tag').textContent = tool.category || '수업 도구';
@@ -28,6 +29,9 @@ export function renderHub(main, tools) {
     }
     if (tool.id === 'polynomial-forest') {
       card.querySelector('.timer-illustration').innerHTML = '<span class="illustration-caption">공통수학1 · 다항식</span><div class="notebook"><span class="notebook-label">polynomial forest</span><span class="forest-card-animals" aria-hidden="true">🐿️ 🐢</span><span class="notebook-line"></span><span class="sample-caption">이동 · 점프 · 퀴즈 · 뱃지</span></div><span class="sparkle">✦</span>';
+    }
+    if (tool.id === 'personal-diary') {
+      card.querySelector('.timer-illustration').innerHTML = '<span class="illustration-caption">나만의 작은 기록</span><div class="notebook"><span class="notebook-label">personal diary</span><span class="sample-document">오늘의 마음</span><span class="notebook-line"></span><span class="sample-caption">기록 · 기분 · 계정별 보관</span></div><span class="sparkle">✦</span>';
     }
     grid.append(card);
   }
