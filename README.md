@@ -1,5 +1,7 @@
 # 교실 도구 허브 사용과 개발
 
+웹 앱: [GitHub Pages에서 열기](https://taehwan-shin.github.io/classroom-hub/). Pages의 배포 방식, 지원되는 보안 정책과 응답 헤더 한계는 [PAGES-DEPLOYMENT.md](PAGES-DEPLOYMENT.md)를 확인하세요.
+
 ## 로컬에서 실행하기
 
 Windows에서 `start.cmd`를 더블클릭하고 브라우저로 `http://127.0.0.1:4173`에 접속합니다. 실행 창을 열어두고 사용하며, 종료할 때 창에서 Ctrl+C를 누릅니다. 이 실행 주소는 현재 PC에서만 접근할 수 있습니다.

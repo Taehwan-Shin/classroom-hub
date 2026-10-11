@@ -32,3 +32,9 @@ PDF.js의 [GHSA-hq66-cqwq-w95j](https://github.com/mozilla/pdf.js/security/advis
 - 일기 정적 파일·API·데이터 경로가 404, 잘못된 Host가 403이며 CORS 허용과 외부 연결이 없음을 확인했다.
 
 GitHub 저장소 공개는 웹사이트 호스팅 배포와 다르다. 실제 HTTPS 호스팅의 헤더·로그 정책, 모든 악성 PDF, 실제 모바일 기기, 정전·디스크 장애, 메모리의 보안 삭제는 이 검증 범위에 포함하지 않는다. 신규 웹 배포 시 README의 보안 헤더 적용과 실응답 검증이 필요하다.
+
+## GitHub Pages 배포 변경 감사 · 2026-10-12
+
+사용자의 명시적인 요청으로 공개 도구를 gh-pages 정적 브랜치에서 배포한다. 변경은 HTML의 no-referrer 메타와 배포 문서이며 도구의 계산·저장·입력 처리는 변경하지 않았다. 외부 라이브러리·별도 외부 Actions·토큰·서버 API를 추가하지 않는다. 정적 파일 허용 목록과 vendor 무결성 검증을 유지하고 실제 데이터·환경파일·일기 구현·소스 지원 문서를 배포본에서 제외한다.
+
+GitHub Pages의 응답 헤더를 직접 설정할 수 없는 차이, OCR worker 정책, iframe 차단 한계, 호스팅 로그와 수동 릴리스 동작은 PAGES-DEPLOYMENT.md에 기록했다. 기존 로컬 서버의 CSP 헤더와 Pages 실응답을 혼동하지 않는다. HTML meta CSP와 no-referrer 정책은 유지한다. HTTPS 강제와 실제 사이트 검증을 수행한다. main 수정만으로 사이트가 자동 갱신되지 않으므로 재빌드·검토 후 gh-pages를 갱신해야 한다.
