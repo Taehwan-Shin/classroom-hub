@@ -17,3 +17,5 @@ GitHub Pages에 build/security-headers.json이 자동 적용되는 것은 아니
 ## 검증
 
 공개 소스 테스트, vendor 고정 해시, 정적 파일 허용 목록과 릴리스 manifest를 검사한다. 배포 후 HTTPS 응답·JavaScript MIME·하위 경로·세 도구 화면·합성 PDF/OCR·다운로드·외부 연결·일기 경로 제외를 검증한다. 실제 학생·교사 문서와 개인정보는 테스트에 사용하지 않는다. 최초 배포 검증 결과는 SECURITY-AUDIT.md에 기록한다.
+
+2026-10-12 최초 배포 검증 완료: 소스 테스트 34개, 실사이트 허브·타이머 48개, PDF/OCR 25개 통과. 게임의 시작·문제·해설·계속 진행·일시정지를 확인했다. 배포 파일 36개의 해시와 JavaScript MIME이 일치했다. 실제 HTTP 응답에는 HSTS가 있고 CSP·X-Frame-Options·X-Content-Type-Options 헤더는 없다. 위에 설명한 meta 정책과 헤더 한계가 실제 환경에도 해당한다.

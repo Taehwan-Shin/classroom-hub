@@ -38,3 +38,9 @@ GitHub 저장소 공개는 웹사이트 호스팅 배포와 다르다. 실제 HT
 사용자의 명시적인 요청으로 공개 도구를 gh-pages 정적 브랜치에서 배포한다. 변경은 HTML의 no-referrer 메타와 배포 문서이며 도구의 계산·저장·입력 처리는 변경하지 않았다. 외부 라이브러리·별도 외부 Actions·토큰·서버 API를 추가하지 않는다. 정적 파일 허용 목록과 vendor 무결성 검증을 유지하고 실제 데이터·환경파일·일기 구현·소스 지원 문서를 배포본에서 제외한다.
 
 GitHub Pages의 응답 헤더를 직접 설정할 수 없는 차이, OCR worker 정책, iframe 차단 한계, 호스팅 로그와 수동 릴리스 동작은 PAGES-DEPLOYMENT.md에 기록했다. 기존 로컬 서버의 CSP 헤더와 Pages 실응답을 혼동하지 않는다. HTML meta CSP와 no-referrer 정책은 유지한다. HTTPS 강제와 실제 사이트 검증을 수행한다. main 수정만으로 사이트가 자동 갱신되지 않으므로 재빌드·검토 후 gh-pages를 갱신해야 한다.
+
+실제 배포 결과: [GitHub 기본 배포 실행](https://github.com/Taehwan-Shin/classroom-hub/actions/runs/38155443199)이 성공하고 Pages 상태 built와 https_enforced=true를 확인했다. gh-pages 배포 커밋은 9e61f6eb4bf79d991b4a503894987a4cbb16613d이며 릴리스 ID는 b6066c9cd8d4099b0b4fde3cdc1769b0186928a79568a461ecb7ca5a76ae2b99이다.
+
+배포 주소에서 정적 파일 36개의 SHA-256이 로컬 manifest와 일치하고 모든 .mjs·.js의 JavaScript MIME을 확인했다. HTML meta CSP와 no-referrer가 존재하고 HSTS 응답이 제공된다. 반면 CSP·X-Frame-Options·X-Content-Type-Options 응답 헤더는 실제로 없었다. 지원되지 않는 헤더를 적용됐다고 주장하지 않는다.
+
+일기 화면·암호화 모듈·스타일·저장 API·데이터·환경파일 경로는 404였다. 실제 HTTPS Chrome에서 허브·타이머 48개, PDF·한글 스캔 OCR·엑셀·용량 제한·취소·기록 폐기 25개 검사가 통과했다. 다항식 게임의 시작·퀴즈 응답·해설·계속 진행·일시정지를 확인했고 화면도 검토했다. 검증 중 사용자 문서·원문·파일명·요청 본문·외부 엔드포인트 전송과 브라우저/CSP 오류가 없었다. 모든 자료는 합성 입력이다. 일반 악성 문서 전체와 실제 학교 기기 검증을 보증하지 않는다.
