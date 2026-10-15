@@ -5,6 +5,7 @@ import { renderHub } from './hub-view.mjs';
 import { renderTimer } from './timer-view.mjs';
 import { renderPdfInspector } from './pdf-view.mjs';
 import { renderPolynomialGame } from './polynomial-view.mjs';
+import { renderPrivacy } from './privacy-view.mjs';
 
 
 const main = document.querySelector('#main');
@@ -15,6 +16,7 @@ const routes = new Map([
   ['#/', () => renderHub(main, validateTools(tools, new Set(routes.keys())))],
   ['#/timer', () => renderTimer(main, engine, audio, preferences)],
   ['#/pdf', () => renderPdfInspector(main)],
+  ['#/privacy', () => renderPrivacy(main)],
   ['#/polynomial', () => renderPolynomialGame(main)]
 ]);
 
@@ -31,6 +33,7 @@ function navigate() {
   }
   document.title = path === '#/polynomial' ? '다항식 숲 탐험 · 교실 도구 허브' : path === '#/timer' ? '교실 타이머 · 교실 도구 허브' : path === '#/pdf' ? 'PDF 검사 · 교실 도구 허브' : '교실 도구 허브';
 
+  if (path === '#/privacy') document.title = '개인정보 점검 · 비식별화 · 교실 도구 허브';
   if (previous !== null) main.querySelector('h1')?.focus();
   previous = path;
 }

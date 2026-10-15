@@ -41,12 +41,12 @@ export function createLocalOcr(onProgress = () => {}) {
     await send('setParameters', { params: { tessedit_pageseg_mode: '6', preserve_interword_spaces: '1' } });
   })();
   return { ready, terminate,
-    async recognize(canvas) {
+    async recognize(canvas, withBoxes = false) {
       await ready;
       const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
       if (!blob) throw new Error('OCR_UNAVAILABLE');
       const image = new Uint8Array(await blob.arrayBuffer());
-      const data = await send('recognize', { image, options: {}, output: { text: true } });
+      const data = await send('recognize', { image, options: {}, output: { text: true, ...(withBoxes ? { blocks: true } : {}) } });
       return { data };
     }
   };

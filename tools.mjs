@@ -1,5 +1,12 @@
 export const tools = Object.freeze([
   {
+    "id": "privacy-redactor",
+    "title": "개인정보 점검 · 비식별화",
+    "description": "PDF·엑셀의 개인정보를 기기 안에서 찾고, 가린 새 파일로 받으세요.",
+    "route": "#/privacy",
+    "category": "개인정보 보호"
+  },
+  {
     "id": "classroom-timer",
     "title": "교실 타이머",
     "description": "활동 시간을 정하고, 남은 시간을 함께 보세요.",

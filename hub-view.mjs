@@ -24,6 +24,9 @@ export function renderHub(main, tools) {
     card.querySelector('.tag').textContent = tool.category || '수업 도구';
     card.querySelector('h3').textContent = tool.title;
     card.querySelector('.card-copy p').textContent = tool.description;
+    if (tool.id === 'privacy-redactor') {
+      card.querySelector('.timer-illustration').innerHTML = '<span class="illustration-caption">파일은 브라우저 안에서</span><div class="notebook pdf-notebook"><span class="notebook-label">local privacy care</span><span class="sample-document" aria-hidden="true">▰▰ ✓</span><span class="notebook-line"></span><span class="sample-caption">점검 · 직접 가림 · 새 파일</span></div><span class="sparkle">✦</span>';
+    }
     if (tool.id === 'pdf-inspector') {
       card.querySelector('.timer-illustration').innerHTML = '<span class="illustration-caption">문서도 기기 안에서</span><div class="notebook pdf-notebook"><span class="notebook-label">local document check</span><span class="sample-document">가나다 <span aria-hidden="true">✓</span></span><span class="notebook-line"></span><span class="sample-caption">글자 수 · 교정 후보 · 엑셀</span></div><span class="sparkle">✦</span>';
     }
