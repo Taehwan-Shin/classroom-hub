@@ -1,6 +1,6 @@
 {
   "kind": "classroom-hub-static-v1",
-  "release": "a16166665965336a23a102eab918086da4026b19b1f7ac526a327794b6518a33",
+  "release": "01631c2dbf10f983ae6c8ae8fdb475e1deb43f42afd791a5dc579a61d18d87fa",
   "files": {
     "app.mjs": "fab7748e2fb52da34e50ee3fda03820241b4eb40f95a57bafa826eeacae2f37b",
     "assets/mark.svg": "d180bda54e4215c84b05c75ea0adffedb13f7640aaf507506b20e2bb18e68d95",
@@ -23,7 +23,7 @@
     "privacy-pdf.mjs": "eb49a6830821f389f75f9d6a1d610ef6809f95f24e73f682a42c6b638218e383",
     "privacy-view.mjs": "22e7c5649b2c608021a85a01385d4b9ebdd5b17284234ab276fced81b4d573ba",
     "privacy-zip.mjs": "d460bf1799a27d65019632d5143bedf356d8fd5d5430e29fd86a6feb92105b2e",
-    "privacy.css": "014c83ba2b88bd3a41731e320f47feb95319328bf2c12ee403a1316df19c2596",
+    "privacy.css": "c17acdcecd0f2518ac9f4d4769e1a1158064511189a3d15d1b577596a38f9bc4",
     "styles.css": "95ab97944e11a48b0dce72799378442d1d4c01fac5f8977fd676a57b5d21e1cc",
     "timer-engine.mjs": "c75db85327a1d99c66f1d8219702a5d2d8b32dd9bb6567b77f1502ec1021e66d",
     "timer-view.mjs": "353b3345b057bd899ac21733dad1a8204b0ed92a9c38c210cb25a7895e7d600a",
