@@ -12,6 +12,7 @@ const stage = path.join(parent, `.stage-${randomUUID()}`);
 const backup = path.join(parent, `.previous-${randomUUID()}`);
 const excluded = new Set();
 const publicFiles = new Set(['app.mjs', 'audio.mjs', 'excel-export.mjs', 'hub-view.mjs', 'index.html', 'local-ocr.mjs', 'ocr-worker.js',
+  'privacy.css', 'privacy-view.mjs', 'privacy-detect.mjs', 'privacy-excel-worker.mjs', 'privacy-pdf.mjs', 'privacy-pdf-export.mjs', 'privacy-zip.mjs',
   'pdf-analysis.mjs', 'pdf-reader.mjs', 'pdf-view.mjs', 'polynomial-data.mjs', 'polynomial-engine.mjs', 'polynomial-view.mjs',
   'polynomial.css', 'styles.css', 'timer-engine.mjs', 'timer-view.mjs', 'tools.mjs', 'assets/mark.svg']);
 const kind = 'classroom-hub-static-v1';

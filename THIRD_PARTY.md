@@ -1,5 +1,7 @@
 # PDF 기능의 외부 구성 요소
 
+개인정보 도구의 XLSX/XLS 읽기·값 전용 XLSX 생성에는 SheetJS CE 0.20.3을 추가했다. 공식 배포 `https://cdn.sheetjs.com/xlsx-0.20.3/package/xlsx.mjs`와 LICENSE를 로컬에 포함하고 SHA-256을 `scripts/vendor-checksums.json`에 고정한다. Apache-2.0 고지를 보존하며 설치 스크립트·런타임 CDN·HTML exporter를 사용하지 않는다. 자세한 공급망·위협·검증 한계는 PRIVACY-AUDIT.md를 참고한다.
+
 | 구성 요소 | 고정 버전 | 공식 출처·라이선스 |
 |---|---|---|
 | pdfjs-dist | 6.4.299 | [Mozilla PDF.js](https://github.com/mozilla/pdf.js/releases/tag/v6.4.299), Apache-2.0 |
