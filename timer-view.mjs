@@ -14,7 +14,7 @@ export function renderTimer(main, engine, audio, preferences) {
             <fieldset class="custom-time"><legend>직접 설정</legend><div class="time-inputs"><label for="minutes" class="sr-only">분 (0~99)</label><input id="minutes" name="minutes" type="text" inputmode="numeric" pattern="[0-9]*" value="5" autocomplete="off" aria-describedby="time-error time-range"><span>분</span><label for="seconds" class="sr-only">초 (0~59)</label><input id="seconds" name="seconds" type="text" inputmode="numeric" pattern="[0-9]*" value="0" autocomplete="off" aria-describedby="time-error time-range"><span>초</span></div></fieldset></div>
           <p id="time-range" class="range-note">최대 99분 59초 · 1초 이상 설정해주세요.</p>
           <p id="time-error" class="input-error" role="alert"></p>
-          <div class="timer-controls"><button class="primary-button" type="submit" id="start">시작하기 <span aria-hidden="true">→</span></button><button type="button" id="pause" hidden>일시정지</button><button type="button" id="resume" hidden>계속하기 <span aria-hidden="true">→</span></button><button type="button" id="reset">초기화 ↺</button></div>
+          <div class="timer-controls"><button class="primary-button" type="submit" id="start">시작하기</button><button type="button" id="pause" hidden>일시정지</button><button type="button" id="resume" hidden>계속하기</button><button type="button" id="reset">초기화</button></div>
         </form>
         <p class="feature-notice" role="status" aria-live="polite"></p>
       </div>
