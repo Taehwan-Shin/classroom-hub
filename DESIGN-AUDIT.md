@@ -15,3 +15,7 @@
 - scripts/publish-design-pages.mjs는 현재 gh-pages manifest와 비교해 그림 4개·hub-view.mjs·styles.css·timer-view.mjs만 변경을 허용한다. 그 밖의 파일 변경·삭제·manifest 해시 불일치는 거부한다. tools.mjs와 모든 처리 모듈은 배포 전후 같은 해시를 유지한다.
 - 기존 gh-pages 커밋을 부모로 추가하고 일반 fast-forward push만 사용한다. 동시 변경이 있으면 거부되며 force push하지 않는다. 기존 이력은 롤백할 수 있도록 유지한다. Pages 설정·도메인·외부 게임/일기 배포는 변경하지 않는다.
 - GitHub Pages의 보안 헤더 한계는 PAGES-DEPLOYMENT.md와 동일하다. 새 시크릿·PII·데이터 파일·백업·비공개 앱 소스는 공개 파일에 추가하지 않는다.
+
+## 실제 게시 결과
+
+GitHub Pages Actions 실행 38926058010이 success로 완료됐다. 실제 사이트의 새 manifest와 변경 파일 7개의 SHA-256·WebP MIME을 확인했다. 공개 URL에서 Chrome 디자인·기능 검사 37개가 통과했으며 오류·외부 요청은 없었다. 배포 커밋과 릴리스 ID는 PAGES-DEPLOYMENT.md에 기록했다.

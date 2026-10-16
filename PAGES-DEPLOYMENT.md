@@ -1,5 +1,13 @@
 # GitHub Pages 배포
 
+## 작은 카드 디자인 반영 기록
+
+기존 5개 도구와 게임·일기 연결을 유지하면서 생성 일러스트·최대 30px 제목·작은 3열 카드를 게시했다. main 소스 커밋 `ccb4388`, gh-pages 배포 커밋 `2591b803e4e5e6ad9b30599846fb69772e1039e2`, 이전 배포 `b2f1e10e488c737f2bbe3c846d4d151eec333118`이다.
+
+릴리스 `5d95f393fa9e517a5332a7c7fde1e3b0515e7d42f6f0a53d646095aed32d4606`의 Pages Actions 게시가 성공했다. 실제 HTTPS 사이트 manifest가 해당 릴리스를 제공하며, 변경된 파일 7개의 SHA-256과 WebP MIME이 로컬 빌드와 일치했다. 공개 사이트 Chrome 검사 37개가 통과했고 브라우저/CSP 오류와 외부 요청은 없었다. PC 5개 크기에서 전체 도구가 스크롤 없이 보이며 모바일 320·390px와 태블릿도 가로 넘침 없이 표시된다. 실제 문서·일기·계정으로 시험하지 않았다.
+
+소스·빌드와 검증 절차는 DESIGN-AUDIT.md 및 scripts/publish-design-pages.mjs에 기록했다. 기존 도메인·Pages 설정·외부 게임과 일기 서비스는 변경하지 않았다.
+
 배포 주소: https://taehwan-shin.github.io/classroom-hub/
 
 이 공개 저장소의 gh-pages 브랜치 루트에 검증한 build/static 파일과 .nojekyll만 배포한다. GitHub 기본 브랜치 배포를 사용하며 별도 외부 Actions, npm 패키지 또는 설치 스크립트를 도입하지 않는다. HTTPS를 강제한다. 일기 저장소와 실제 기록을 배포하지 않는다.
