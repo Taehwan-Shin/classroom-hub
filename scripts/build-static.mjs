@@ -14,7 +14,9 @@ const excluded = new Set();
 const publicFiles = new Set(['app.mjs', 'audio.mjs', 'excel-export.mjs', 'hub-view.mjs', 'index.html', 'local-ocr.mjs', 'ocr-worker.js',
   'privacy.css', 'privacy-view.mjs', 'privacy-detect.mjs', 'privacy-excel-worker.mjs', 'privacy-pdf.mjs', 'privacy-pdf-export.mjs', 'privacy-zip.mjs',
   'pdf-analysis.mjs', 'pdf-reader.mjs', 'pdf-view.mjs', 'polynomial-data.mjs', 'polynomial-engine.mjs', 'polynomial-view.mjs',
-  'polynomial.css', 'styles.css', 'timer-engine.mjs', 'timer-view.mjs', 'tools.mjs', 'assets/mark.svg']);
+  'polynomial.css', 'styles.css', 'timer-engine.mjs', 'timer-view.mjs', 'tools.mjs', 'assets/mark.svg',
+  'assets/illustrations/timer-v1.webp', 'assets/illustrations/pdf-v1.webp',
+  'assets/illustrations/forest-v1.webp', 'assets/illustrations/journal-v1.webp']);
 const kind = 'classroom-hub-static-v1';
 function replaceOnce(source, before, after = '') {
   if (source.split(before).length !== 2) throw new Error('Static build source changed: review diary exclusion rules');

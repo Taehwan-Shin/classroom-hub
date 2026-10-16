@@ -10,7 +10,7 @@ const root = await realpath(fileURLToPath(new URL(staticPreview ? '../build/stat
 const port = Number(process.env.PORT || 4173);
 if (!Number.isInteger(port) || port < 1024 || port > 65535) throw new Error('Invalid local port');
 const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8',
-  '.mjs': 'text/javascript; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.txt': 'text/plain; charset=utf-8' };
+  '.mjs': 'text/javascript; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.webp': 'image/webp', '.txt': 'text/plain; charset=utf-8' };
 const server = http.createServer(async (request, response) => {
   const ocrWorker = request.url?.split('?')[0] === '/ocr-worker.js';
   for (const [name, value] of Object.entries(securityHeaders({ ocr: ocrWorker }))) response.setHeader(name, value);
